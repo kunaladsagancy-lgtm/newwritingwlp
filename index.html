@@ -1,257 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi-IN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anand Srinivasan Official</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Work From Home - Avi Channel</title>
+    
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // Replace the text in quotes with your actual Pixel ID
+    fbq('init', 'INSERT_YOUR_PIXEL_ID_HERE'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=INSERT_YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
+    /></noscript>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-
         body {
-            background-color: #050a05;
-            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            background-image: linear-gradient(rgba(51, 255, 51, 0.05) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(51, 255, 51, 0.05) 1px, transparent 1px);
-            background-size: 30px 30px;
-            overflow-x: hidden;
+            height: 100vh;
+            justify-content: flex-start;
         }
 
-        /* Top Ticker */
-        .ticker-wrap {
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            border-bottom: 1px solid rgba(51, 255, 51, 0.3);
-            padding: 12px 0;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            z-index: 100;
-        }
-
-        .ticker {
-            display: inline-block;
-            white-space: nowrap;
-            color: #33ff33;
-            font-size: 12px;
-            font-weight: 600;
-            animation: marquee 25s linear infinite;
-        }
-
-        @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-
-        .main-content {
-            margin-top: 100px;
-            text-align: center;
-            width: 90%;
-            max-width: 420px;
-            z-index: 10;
-        }
-
-        .channel-label {
-            background: rgba(51, 255, 51, 0.1);
-            color: #33ff33;
-            border: 1px solid rgba(51, 255, 51, 0.4);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 11px;
-            display: inline-block;
-            margin-bottom: 25px;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px; /* Name lamba hai isliye font size thoda chota kiya taaki screen par sahi dikhe */
-            line-height: 1.2;
-            margin-bottom: 5px;
-            word-wrap: break-word;
-        }
-
-        .sub-title {
-            color: #33ff33;
-            font-size: 14px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        /* Moving Scan Line */
-        .scan-line-container {
-            width: 100%;
-            height: 60px;
-            position: relative;
-            margin: 10px 0;
-            overflow: hidden;
-        }
-
-        .moving-line {
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #33ff33, transparent);
-            box-shadow: 0 0 15px #33ff33, 0 0 5px #fff;
-            position: absolute;
-            animation: moveUpDown 3s ease-in-out infinite;
-        }
-
-        @keyframes moveUpDown {
-            0% { top: 0; opacity: 0; }
-            50% { top: 30px; opacity: 1; }
-            100% { top: 60px; opacity: 0; }
-        }
-
-        .description {
-            color: #aaa;
-            font-size: 14px;
-            line-height: 1.5;
-            margin: 20px 0 30px;
-        }
-
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
+        .main-title {
+            color: #d93025; /* Red color from image */
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 0;
             margin-bottom: 20px;
-        }
-
-        .stat-box {
-            background: #000;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 10px 5px;
-            border-radius: 8px;
-            font-size: 11px;
-            color: #eee;
-        }
-
-        .up { color: #33ff33; font-weight: bold; }
-        .down { color: #ff4444; font-weight: bold; }
-
-        /* Tags */
-        .tags-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 40px;
-        }
-
-        .tag {
-            background: #111;
-            border: 1px solid rgba(51, 255, 51, 0.2);
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-        }
-
-        /* Telegram Button */
-        .join-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            background: #33ff33;
-            color: #000;
+            gap: 10px;
+        }
+
+        .company-logo {
+            width: 200px; /* Adjust size to match the image */
+            margin-bottom: 30px;
+        }
+
+        .text-line {
+            font-size: 18px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .students-line {
+            color: #00796b; /* Teal color from image */
+            font-weight: normal;
+        }
+
+        .whatsapp-cta-button {
+            background: linear-gradient(to right, #25D366, #128C7E); /* WhatsApp green gradient */
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 40px;
+            margin: 30px 0;
+            cursor: pointer;
             text-decoration: none;
-            padding: 20px;
-            border-radius: 12px;
-            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.1s ease;
+        }
+
+        .whatsapp-cta-button:active {
+            transform: scale(0.97);
+        }
+
+        .whatsapp-cta-button::before {
+            content: "👉"; /* Finger emoji from image */
+            font-size: 24px;
+        }
+
+        .info-list {
+            margin-bottom: 30px;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .job-seekers-line {
+            color: #c2185b; /* Pink color from image */
+        }
+
+        .guidance-line {
+            color: #33691e; /* Green color from image */
+            font-weight: bold;
+        }
+
+        .timer-line {
+            color: #d93025; /* Red color from image */
+            font-weight: bold;
             font-size: 20px;
-            text-transform: uppercase;
-            box-shadow: 0 0 25px rgba(51, 255, 51, 0.6);
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 15px rgba(51, 255, 51, 0.5); }
-            50% { transform: scale(1.02); box-shadow: 0 0 35px rgba(51, 255, 51, 0.9); }
-            100% { transform: scale(1); box-shadow: 0 0 15px rgba(51, 255, 51, 0.5); }
-        }
-
-        .footer-text {
             margin-top: 20px;
-            font-size: 11px;
-            color: #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        /* Kunal Ads Section */
-        .ads-promo {
-            margin-top: 25px;
-            padding: 10px;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .ads-text { color: #ffffff; opacity: 0.9; }
-
-        .brand-name {
-            color: #00d2ff;
-            font-weight: 700;
-            text-decoration: underline;
-            margin-left: 5px;
-            text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
-        }
-
-        .ads-promo:hover .brand-name {
-            color: #fff;
-            text-shadow: 0 0 20px #00d2ff;
-        }
     </style>
 </head>
 <body>
 
-    <div class="ticker-wrap">
-        <div class="ticker">
-            FREE CHANNEL • TELUGU COMMUNITY • DAILY ALERTS • @ANAND_SRINIVASAN_OFFICIAL • NIFTY CALLS • BANKNIFTY • 
-        </div>
+    <h1 class="main-title">WORK FROM HOME 🏠</h1>
+
+    <img src="https://i.imgur.com/uG9X6D7.png" alt="AB Company Logo" class="company-logo">
+
+    <p class="text-line students-line">STUDENTS 📚 पढ़ाई के साथ EXTRA INCOME</p>
+
+    <a href="https://whatsapp.com/channel/0029Vb7QG8E3bbVAj5gyi63n" target="_blank" class="whatsapp-cta-button" onclick="trackLeadConversion()">
+        JOIN WHATSAPP CHANNEL
+    </a>
+
+    <div class="info-list">
+        <p class="text-line">HOUSEWIFE 🏠 खाली समय का सही इस्तेमाल</p>
+        <p class="text-line job-seekers-line">JOB SEEKERS 🛍️ के नए SOURCE</p>
+        <p class="text-line guidance-line">आसानी से समझ आने वाली GUIDANCE</p>
     </div>
 
-    <div class="main-content">
-        <div class="channel-label">● TELEGRAM CHANNEL · FREE</div>
-        
-        <h1>@Anand_Srinivasan_official</h1>
-        <div class="sub-title">Official Trader™</div>
+    <p class="timer-line">⏳ Hurry! 9m 59s left</p>
 
-        <div class="scan-line-container">
-            <div class="moving-line"></div>
-        </div>
-
-        <div class="description">
-            Expert stock & options calls for the Telugu community — NIFTY, BANKNIFTY & intraday tips, daily on Telegram.
-        </div>
-
-        <div class="stats-grid">
-            <div class="stat-box">NIFTY <span class="up">23,842 ▲</span></div>
-            <div class="stat-box">BANKNIFTY <span class="up">51,204 ▲</span></div>
-            <div class="stat-box">SENSEX <span class="down">78,502 ▼</span></div>
-        </div>
-
-        <div class="tags-container">
-            <div class="tag">📈 Intraday</div>
-            <div class="tag">🎯 Options</div>
-            <div class="tag">💹 Swing</div>
-            <div class="tag">⚡ Alerts</div>
-        </div>
-
-        <a href="https://t.me/+XTZpHxU_5MdmODk1" class="join-btn">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="28">
-            JOIN FREE ON TELEGRAM
-        </a>
-
-        <div class="footer-text">
-            Market live · Members active · Trade responsibly
-        </div>
-
-        <a href="https://t.me/+XTZpHxU_5MdmODk1" class="ads-promo">
-            <span class="ads-text">Meta ads setup k liye dm kro</span>
-            <span class="brand-name">Kunal Ads</span>
-        </a>
-    </div>
+    <script>
+        // Track Pixel Lead Event when button is clicked
+        function trackLeadConversion() {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead', {
+                    content_name: 'Work From Home Avi Channel Join',
+                    content_category: 'Lead Generation'
+                });
+            }
+        }
+    </script>
 
 </body>
 </html>
